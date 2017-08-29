@@ -43,7 +43,9 @@ class FormHelper extends Helper
         'dateWidget' => '<ul class="list-inline"><li class="year">{{year}}</li><li class="month">{{month}}</li><li class="day">{{day}}</li><li class="hour">{{hour}}</li><li class="minute">{{minute}}</li><li class="second">{{second}}</li><li class="meridian">{{meridian}}</li></ul>',
         'error' => '<div class="help-block">{{content}}</div>',
         'help' => '<div class="help-block">{{content}}</div>',
-        'inputContainer' => '<div class="form-group {{type}}{{required}}">{{content}}{{help}}</div>',
+        //Modified to apply AdminBSB theme 24/08/2017
+        'inputContainer' => '{{content}}{{help}}',
+        //'inputContainer' => '<div class="form-group {{type}}{{required}}">{{content}}{{help}}</div>',
         'inputContainerError' => '<div class="form-group {{type}}{{required}} has-error">{{content}}{{error}}{{help}}</div>',
         'radioInlineFormGroup' => '{{label}}<div class="radio-inline-wrapper">{{input}}</div>',
         'radioNestingLabel' => '<div class="radio">{{hidden}}<label{{attrs}}>{{input}}{{text}}</label></div>',
@@ -71,7 +73,9 @@ class FormHelper extends Helper
             'formGroup' => '{{label}}<div class="%s">{{input}}{{error}}{{help}}</div>',
             'checkboxFormGroup' => '<div class="%s"><div class="checkbox">{{label}}</div>{{error}}{{help}}</div>',
             'submitContainer' => '<div class="form-group"><div class="%s">{{content}}</div></div>',
-            'inputContainer' => '<div class="form-group {{type}}{{required}}">{{content}}</div>',
+            //Modified to apply AdminBSB theme. 24/08/2017
+            'inputContainer' => '{{content}}',
+            //'inputContainer' => '<div class="form-group {{type}}{{required}}">{{content}}</div>',
             'inputContainerError' => '<div class="form-group {{type}}{{required}} has-error">{{content}}</div>',
             'checkboxContainer' => '<div class="form-group{{required}}">{{content}}</div>',
             'checkboxContainerError' => '<div class="form-group{{required}} has-error">{{content}}</div>',
@@ -88,7 +92,7 @@ class FormHelper extends Helper
     protected $_widgets = [
         'button' => 'BootstrapUI\View\Widget\ButtonWidget',
         'radio' => ['BootstrapUI\View\Widget\RadioWidget', 'nestingLabel'],
-        'select' => 'BootstrapUI\View\Widget\SelectBoxWidget',
+        //'select' => 'BootstrapUI\View\Widget\SelectBoxWidget',
         'textarea' => 'BootstrapUI\View\Widget\TextareaWidget',
         '_default' => 'BootstrapUI\View\Widget\BasicWidget',
     ];

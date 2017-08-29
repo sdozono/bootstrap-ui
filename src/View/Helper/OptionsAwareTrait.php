@@ -43,7 +43,8 @@ trait OptionsAwareTrait
         if ($this->hasAnyClass($this->buttonClasses, $data)) {
             $data = $this->injectClasses(['btn'], $data);
         } else {
-            $data = $this->injectClasses(['btn', 'btn-default'], $data);
+            //22/08/2017 To activate bootstrap Theme, inactivate this.
+            //$data = $this->injectClasses(['btn', 'btn-default'], $data);
         }
 
         return $this->renameClasses($this->buttonClassAliases, $data);
